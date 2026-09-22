@@ -113,14 +113,17 @@ void main(){
   var input2 = stdin.readLineSync()!;
   stdout.write('Masukkan berat : ');
   var input3 = stdin.readLineSync()!;
-  void datamhs(nama,umur,berat){
-    List data =[];
-    Map data1 = {nama,umur,berat};
+
+   List<Map> datamhs(String nama, int umur, double berat){
+    Map data1 = {'Nama':nama,'Umur':umur,'Berat':berat};
+    List<Map> data =[];
     data.add(data1);
     return data;
+   
   }
-  hasil = datamhs(input1,int.parse(input2) , double.parse(input3));
-  print (hasil);
+  var hasil=datamhs(input1, int.parse(input2) , double.parse(input3));
+  print('Nama saya ${hasil[0]['Nama']}, Umur saya ${hasil[0]['Umur']}, berat saya ${hasil[0]['Berat']}');
+
 
 
 
