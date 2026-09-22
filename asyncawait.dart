@@ -113,7 +113,15 @@ void main(){
   var input2 = stdin.readLineSync()!;
   stdout.write('Masukkan berat : ');
   var input3 = stdin.readLineSync()!;
-  
+  void datamhs(nama,umur,berat){
+    List data =[];
+    Map data1 = {nama,umur,berat};
+    data.add(data1);
+    return data;
+  }
+  hasil = datamhs(input1,int.parse(input2) , double.parse(input3));
+  print (hasil);
+
 
 
 }
